@@ -2,11 +2,12 @@ import Link from 'next/link'
 import React from 'react'
 
 export default function NavBar() {
+
     return (
-        <nav className="fixed top-0 left-0 z-50 w-full border-b border-gray-300 bg-white dark:bg-gray-900 shadow-md transition-all duration-300">
-            <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center px-4 py-3 lg:flex-nowrap lg:px-8">
+        <nav className="fixed top-0 left-0 z-50 w-full border-b border-slate-700 bg-slate-900/95 backdrop-blur-md shadow-lg">
+            <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center px-4 py-4 lg:flex-nowrap lg:px-8">
                 <button
-                    className="absolute left-4 top-1/2 -translate-y-1/2 rounded-md p-2 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 transition lg:hidden"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 rounded-md p-2 text-slate-300 hover:bg-slate-800 transition lg:hidden"
                     type="button"
                     data-twe-collapse-init=""
                     data-twe-target="#navbarLinks"
@@ -31,40 +32,48 @@ export default function NavBar() {
                 </button>
 
                 <div
-                    className="hidden w-full flex-col items-center gap-6 lg:flex lg:w-auto lg:flex-row lg:gap-x-10"
+                    className="hidden w-full flex-col items-center gap-6 lg:flex lg:w-auto lg:flex-row lg:gap-x-8"
                     id="navbarLinks"
                     data-twe-collapse-item=""
                 >
                     <Link
                         href="/"
-                        className="text-base font-medium text-gray-900 dark:text-gray-100 transition hover:text-gray-600 dark:hover:text-gray-300"
+                        className="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors duration-200"
                     >
                         Home
                     </Link>
                     <Link
                         href="/product"
-                        className="text-base font-medium text-blue-900 dark:text-blue-100 transition hover:text-blue-600 dark:hover:text-blue-300"
+                        className="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors duration-200"
                     >
-                        Product
+                        Products
                     </Link>
                     <Link
-                        href="/contact"
-                        className="text-base font-medium text-blue-900 dark:text-blue-100 transition hover:text-blue-600 dark:hover:text-blue-300"
+                        href="/user"
+                        className="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors duration-200"
                     >
-                        Contact Us
+                        Users
+                    </Link>
+                     <Link
+                       href="/todo"
+                       className="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors duration-200"
+                     >
+                       Todos
+                     </Link>
+                    <Link
+                        href="/contact"
+                        className="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors duration-200"
+                    >
+                        Contact
                     </Link>
                     <Link
                         href="/login"
-                        className="text-base font-medium text-blue-900 dark:text-blue-100 transition hover:text-blue-600 dark:hover:text-blue-300"
+                        className="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors duration-200"
                     >
                         Login
                     </Link>
                 </div>
             </div>
         </nav>
-
-
-
-
     )
 }

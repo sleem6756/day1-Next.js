@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Contact() {
+  
   return (
     <div className="min-h-screen py-20 bg-gray-100 flex items-center justify-center px-4 py-12">
       <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-lg w-full text-gray-900 border border-gray-300">
