@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import Image from 'next/image'
 
 
@@ -32,10 +33,6 @@ export default async function Details({ params }) {
   const { id } = await params
   const product = await showDetails(id)
 
-
-
-
-  console.log(product);
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-700 p-6">
       <div className="flex flex-col lg:flex-row max-w-5xl w-full bg-white/10 backdrop-blur-lg rounded-3xl overflow-hidden shadow-2xl border border-white/20 hover:shadow-indigo-500/30 transition-all duration-500 animate-fade-in-up">

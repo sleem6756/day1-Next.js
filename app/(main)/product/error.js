@@ -14,7 +14,9 @@ export const metadata = {
 
 export default function Error({ error, reset }) {
   useEffect(() => {
-    console.error("Error caught by Next.js boundary:", error);
+    if (process.env.NODE_ENV === "development") {
+        console.error("Error caught by Next.js boundary:", error);
+    }
   }, [error]);
 
   return (
