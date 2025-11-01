@@ -1,7 +1,3 @@
-export const dynamic = "force-dynamic";
-export const fetchCache = "force-no-store";
-export const revalidate = 0;
-
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
